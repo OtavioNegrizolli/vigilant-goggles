@@ -55,6 +55,9 @@ export default function JourneyForm({ onChange, value: journey }) {
                     type="time"
                     required
                 />
+                <FormControl.Feedback as="label" htmlFor="startTime" type="invalid">
+                    Obrigatório
+                </FormControl.Feedback>
             </FormGroup>
             <FormGroup as={Col} sm="3" lg="2">
                 <FormLabel htmlFor="departureTime">Horário Saída</FormLabel>
@@ -64,7 +67,9 @@ export default function JourneyForm({ onChange, value: journey }) {
                     type="time"
                     required
                 />
-                <label className="invalid-feedback"></label>
+                <FormControl.Feedback as="label" htmlFor="departureTime" type="invalid">
+                    Obrigatório
+                </FormControl.Feedback>
             </FormGroup>
             <FormGroup as={Col} sm="12" lg="auto">
                 <FormLabel>Dias de trabalho</FormLabel>
@@ -85,7 +90,7 @@ export default function JourneyForm({ onChange, value: journey }) {
                     />
                     <FormCheck
                         className="px-1"
-                        label="Segunda-Feira"
+                        label="Segunda"
                         inline="true"
                         value="mon"
                         id="day-monday"
@@ -95,7 +100,7 @@ export default function JourneyForm({ onChange, value: journey }) {
                     />
                     <FormCheck
                         className="px-1"
-                        label="Terça-Feira"
+                        label="Terça"
                         inline="true"
                         value="tue"
                         id="day-tueday"
@@ -106,7 +111,7 @@ export default function JourneyForm({ onChange, value: journey }) {
 
                     <FormCheck
                         className="px-1"
-                        label="Quarta-Feira"
+                        label="Quarta"
                         inline="true"
                         value="wed"
                         id="day-wednesday"
@@ -117,7 +122,7 @@ export default function JourneyForm({ onChange, value: journey }) {
 
                     <FormCheck
                         className="px-1"
-                        label="Quinta-Feira"
+                        label="Quinta"
                         inline="true"
                         value="thu"
                         id="day-thursday"
@@ -128,7 +133,7 @@ export default function JourneyForm({ onChange, value: journey }) {
 
                     <FormCheck
                         className="px-1"
-                        label="Sexta-Feira"
+                        label="Sexta"
                         inline="true"
                         value="fri"
                         id="day-friday"

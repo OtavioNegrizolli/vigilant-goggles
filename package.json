@@ -4,17 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "jsonwebtoken": "^9.0.2",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-bootstrap-typeahead": "^6.3.2",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

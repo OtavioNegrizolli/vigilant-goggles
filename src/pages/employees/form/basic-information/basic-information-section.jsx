@@ -22,14 +22,14 @@ export default function BasicInformationSection({ onChange, value: employee }) {
         <fieldset className="border rounded p-2">
             <legend>Dados basicos</legend>
             <Row className="p-3">
-                <FormGroup as={Col}>
+                <FormGroup as={Col} sm="12" md="6" lg="6" xl="4">
                     <FormLabel htmlFor="name">Nome completo</FormLabel>
                     <FormControl
                         required
                         id="name"
                         name="name"
                         value={employee.name}
-                        onChange={(e) => onChange("name", e.target.value)}
+                        onChange={(e) => onChange("name", limitLength(50, e.target.value))}
                     />
 
                     <FormControl.Feedback
@@ -40,7 +40,7 @@ export default function BasicInformationSection({ onChange, value: employee }) {
                         Obrigatório
                     </FormControl.Feedback>
                 </FormGroup>
-                <FormGroup as={Col}>
+                <FormGroup as={Col} sm="12" md="6" lg="3" xl="2">
                     <FormLabel htmlFor="birthDate">
                         Data de nascimento
                     </FormLabel>
@@ -59,7 +59,7 @@ export default function BasicInformationSection({ onChange, value: employee }) {
                         Obrigatório
                     </FormControl.Feedback>
                 </FormGroup>
-                <FormGroup as={Col}>
+                <FormGroup as={Col} sm="12" md="6" lg="3">
                     <FormLabel htmlFor="gender">Sexo</FormLabel>
                     <FormSelect
                         id="gender"
@@ -82,7 +82,7 @@ export default function BasicInformationSection({ onChange, value: employee }) {
                         Obrigatório
                     </FormControl.Feedback>
                 </FormGroup>
-                <FormGroup as={Col}>
+                <FormGroup as={Col} sm="12" md="6" lg="3">
                     <FormLabel htmlFor="maritalStatus">Estado Cívil</FormLabel>
                     <FormSelect
                         id="maritalStatus"
@@ -96,14 +96,14 @@ export default function BasicInformationSection({ onChange, value: employee }) {
                         <option value="" disabled>
                             Selecione
                         </option>
+                        <option value="S">
+                            Solteir{employee.gender == "F" ? "a" : "o"}
+                        </option>
                         <option value="C">
                             Casad{employee.gender == "F" ? "a" : "o"}
                         </option>
                         <option value="V">
                             Víuv{employee.gender == "F" ? "a" : "o"}
-                        </option>
-                        <option value="S">
-                            Solteir{employee.gender == "F" ? "a" : "o"}
                         </option>
                     </FormSelect>
                     <FormControl.Feedback
@@ -114,7 +114,7 @@ export default function BasicInformationSection({ onChange, value: employee }) {
                         Obrigatório
                     </FormControl.Feedback>
                 </FormGroup>
-                <FormGroup as={Col}>
+                <FormGroup as={Col}  sm="12" md="6" lg="3">
                     <FormLabel htmlFor="cpf">CPF</FormLabel>
                     <FormControl
                         id="cpf"
@@ -133,7 +133,7 @@ export default function BasicInformationSection({ onChange, value: employee }) {
                         Obrigatório
                     </FormControl.Feedback>
                 </FormGroup>
-                <FormGroup as={Col}>
+                <FormGroup as={Col} sm="12" md="6" lg="3">
                     <FormLabel htmlFor="rg">RG</FormLabel>
                     <FormControl
                         id="rg"

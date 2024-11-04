@@ -1,4 +1,4 @@
-import { Row, Col, FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import { Row, Col, FormGroup, FormControl, FormLabel, FormSelect } from "react-bootstrap";
 import { cepMask } from "../../../../utils";
 
 import { Typeahead } from "react-bootstrap-typeahead";
@@ -6,7 +6,6 @@ import "react-bootstrap-typeahead/css/Typeahead.css";
 
 
 const estadosBrasileiros = [
-    "Selecione",
     "Acre",
     "Alagoas",
     "Amapá",
@@ -68,18 +67,21 @@ export default function AddressForm({ onChange, value: employee }) {
                 </FormGroup>
                 <FormGroup as={Col} md="3">
                     <FormLabel>Estado</FormLabel>
-                    <Typeahead
+                    <FormSelect
                         id="state"
-                        labelKey="name"
-                        multiple={false}
-                        onChange={(e) => {
-                            const s = e[0] || '';
-                            handleChange("state", s);
-                        }}
+                        required
+                        onChange={(e) => handleChange("state", e)}
                         options={estadosBrasileiros}
                         placeholder="Selecione um estado..."
-                        selected={[address.state]}
-                    />
+                        selected={address.state}
+                    >
+                        <option value="" selected disabled>Selecione</option>
+                        {
+                            ...estadosBrasileiros.map( e => {
+                                return <option value={e} key={e}>{e}</option>
+                            })
+                        }
+                    </FormSelect>
                     <FormControl.Feedback as="label" type="invalid">
                         Obrigatório
                     </FormControl.Feedback>
@@ -128,6 +130,7 @@ export default function AddressForm({ onChange, value: employee }) {
                 <FormGroup as={Col} md="2">
                     <FormLabel>Complemento</FormLabel>
                     <FormControl
+                        formNoValidate={false}
                         value={address.complement}
                         onChange={(e) => handleChange("complement", e)}
                     />

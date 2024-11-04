@@ -1,0 +1,61 @@
+header.page-header {
+    margin: 0;
+    padding: 0 20px;
+    background-color: var(--surface);
+    box-shadow: 0 0px 10px 1px #333 A;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+header.page-header>a {
+    padding: 10px 5px;
+    margin: 0;
+    text-decoration: none;
+    color: #ccc;
+}
+
+header.page-header h1 {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+header.page-header .button {
+    outline: none;
+    border: none;
+    background-color: #0000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+header.page-header .button:hover {
+    background-color: #ffffff0F;
+    text-decoration: underline;
+}
+
+.nav {
+    align-items: stretch;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 3px;
+}
+.nav a i{
+    margin-right: 5px;
+}
+
+.nav a:hover {
+    text-shadow: 0 0 1px #fff;
+    text-decoration: underline;
+    background-color: #ffffff0f;
+}
+.nav a:hover i {
+    text-shadow: 0 0 1px #fff;
+    background-color: #ffffff0f;
+}

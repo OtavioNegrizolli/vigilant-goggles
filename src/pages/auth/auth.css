@@ -1,0 +1,155 @@
+.login-wrap {
+    width: 100%;
+    max-width: 400px;
+    margin: 10% auto;
+    color: var(--on-surface);
+    position: relative;
+    overflow: hidden;
+    background: var(--surface);
+    border-radius: 5px;
+    height: fit-content;
+    -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+}
+
+.login-wrap i {
+    color: var(--on-primary);
+}
+
+.login-wrap button {
+    outline: none !important;
+    border: none;
+}
+
+.login-wrap button:active .login-wrap button:focus,
+.login-wrap button:focus-visible {
+    box-shadow: none !important;
+}
+
+.login-wrap label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.login-wrap h3 {
+    font-size: 1.75rem;
+}
+
+.login-wrap .form-control {
+    height: 48px;
+    font-size: 16px;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.login-wrap a {
+    -webkit-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+    color: #e3b04b;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.login-wrap .form-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.login-wrap .form-group .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.login-wrap .checkbox-wrap {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.login-wrap .checkbox-wrap .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.login-wrap .checkbox-wrap .checkmark::after {
+    content: "\f0c8";
+    font-family: "FontAwesome";
+    position: absolute;
+    color: #fff;
+    background-color: #fff;
+    font-size: 20px;
+    line-height: 1rem;
+    border-radius: 3px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .login-wrap .checkbox-wrap .checkmark:after {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+}
+
+.login-wrap .checkbox-wrap input:checked~.checkmark:after {
+    display: block;
+    content: "\f14a";
+    font-family: "FontAwesome";
+    color: #fff;
+}
+
+.login-wrap .checkbox-wrap input:checked~.checkmark:after {
+    color: var(--primary);
+}
+
+.login-wrap .social-media {
+    position: relative;
+    width: 100%;
+}
+
+.login-wrap .social-media a {
+    text-decoration: none;
+}
+
+.login-wrap .social-media .social-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.login-wrap .checkbox-wrap {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

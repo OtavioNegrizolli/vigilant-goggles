@@ -22,6 +22,10 @@ body,
     padding: 0;
     margin: 0;
 }
+#root {
+    display: flex;
+    flex-direction: column;
+}
 
 legend {
     all: unset;
@@ -50,7 +54,11 @@ legend {
 ::-webkit-scrollbar-thumb:hover {
     background: #aaa;
 }
-/* :root {
-    --bs-body-color: #eee;
-    --bs-body-bg: #050508;
-} */
+
+:root {
+    --bs-primary: #509;
+    /* --primary: #509; */
+    --on-primary: #fff;
+    --surface: #1d2124;
+    --bs-body-bg: #0e1113;
+}
