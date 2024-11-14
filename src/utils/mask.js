@@ -115,13 +115,14 @@ export function phoneMask(value) {
  * @param {KeyboardEvent} evt
  */
 export function moneyMask(evt) {
-    const value = evt.target.value;
+    console.log(111)
+    const value = evt.target.value || evt.currentTarget.value;
     if (value && value.length > 0) {
         /** @type {string} */
         const clearValue = value.replace(/\D/gi, "");
         const maskedValue = clearValue
             .replace(/(\d)(\d{2})$/g, "$1,$2")
-            .replace(/(?=(\d{3})+(\D))\B/, ".");
+            .replace(/(?=(\d{3})+(,))\B/g, ".");
 
         evt.target.value = maskedValue;
     }

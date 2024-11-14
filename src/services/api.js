@@ -2,7 +2,7 @@ import { authService } from "./auth.service";
 
 class Api {
     constructor() {
-        this.api_url = "http://localhost:4321/api";
+        this.api_url = "http://localhost:5001/api";
     }
 
     /**

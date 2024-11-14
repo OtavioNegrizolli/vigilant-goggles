@@ -1,9 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import EmployeeForm from "./pages/employees/form/employee-form";
-import ProductForm from "./pages/product";
+import {
+    ProductForm,
+    ProductsList,
+    ProductsLayout
+} from "./pages/product";
 
-import { AuthProvider } from "./context/auth-context";
+import { AuthProvider } from "./context/auth.context";
 
 import LoginPage from "./pages/auth/login";
 import SignUpPage from "./pages/auth/signup";
@@ -20,7 +24,10 @@ function App() {
                     <Route path="/" element={<RouteGuard />}>
                         <Route index element={<HomePage />} />
                         <Route path="employee" element={<EmployeeForm />} />
-                        <Route path="products" element={<ProductForm />} />
+                        <Route path="products" element={<ProductsLayout/>}>
+                            <Route index element={<ProductsList />} />
+                            <Route path=":id" element={<ProductForm />} />
+                        </Route>
                     </Route>
                     <Route path="*" element={<h1>Go awai</h1>} />
                 </Routes>

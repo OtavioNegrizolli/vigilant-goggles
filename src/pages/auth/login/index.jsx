@@ -43,7 +43,7 @@ export default function LoginPage() {
     return (
         <main className="login-wrap p-4 p-md-5">
             <Header title="Entrar" />
-            <form noValidate className="signin-form" onSubmit={handleLogin}>
+            <form className="signin-form" onSubmit={handleLogin}>
                 <Input label="Usuário" required ref={loginRef} />
                 <Input
                     label="Senha"

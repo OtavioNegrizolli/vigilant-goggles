@@ -62,3 +62,7 @@ legend {
     --surface: #1d2124;
     --bs-body-bg: #0e1113;
 }
+
+.blue-bg {
+    background-color: #0066AA;
+}
